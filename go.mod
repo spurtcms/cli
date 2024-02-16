@@ -1,4 +1,4 @@
-module spurt
+module github.com/spurtcms/cli
 
 go 1.19
 
