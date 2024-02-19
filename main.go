@@ -179,7 +179,8 @@ func getUserInputs() {
 		}
 
 		// Define the path to your SQL backup file
-		backupFile := mydir + "/spurtcm.sql"
+		mydiry, _ := os.Getwd()
+		backupFile := mydiry + "/spurtcm.sql"
 		fmt.Println("backupFile", backupFile)
 		// Construct the pg_restore command
 		cmd := exec.Command("pg_restore", "-h", host, "-p", "5432", "-d", dbName, "-U", userName, "-w", backupFile)
